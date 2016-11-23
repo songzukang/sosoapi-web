@@ -72,9 +72,11 @@
 										<td>${param.defValue}</td>
 										<td>${param.required!'false'}</td>
 										<td>
+										<#if param.schemaFormat??>
 											<textarea class="schema-format">
-${param.schemaFormat}
+											${param.schemaFormat}
 											</textarea>
+										</#if>
 										</td>
 									</tr>
 									</#list>
@@ -94,9 +96,11 @@ ${param.schemaFormat}
 										<td>${resp.code}</td>
 										<td>${resp.description}</td>
 										<td>
+										<#if resp.schemaFormat??>
 											<textarea class="schema-format">
-${resp.schemaFormat}
+											${resp.schemaFormat}
 											</textarea>
+										</#if>
 										</td>
 									</tr>
 									</#list>
